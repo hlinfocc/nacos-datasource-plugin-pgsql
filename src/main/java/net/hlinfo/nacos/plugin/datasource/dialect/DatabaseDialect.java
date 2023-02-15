@@ -13,7 +13,7 @@ public interface DatabaseDialect {
 
     /**
      * get database return primary keys.
-     * @return
+     * @return return primary keys
      */
     public String[] getReturnPrimaryKeys();
 
