@@ -18,7 +18,7 @@ nacos-datasource-plugin-pgsql 是Nacos适配Postgresql数据源插件。
 ```
 git clone https://github.com/hlinfocc/nacos-datasource-plugin-pgsql.git
 cd nacos-datasource-plugin-pgsql/
-mvn clan package
+mvn clean package
 ```
 
 ### 2下载nacos-server 
