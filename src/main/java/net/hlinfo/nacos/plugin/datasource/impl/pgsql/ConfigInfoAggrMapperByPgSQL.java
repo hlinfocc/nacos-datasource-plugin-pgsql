@@ -19,49 +19,6 @@ import java.util.List;
  **/
 
 public class ConfigInfoAggrMapperByPgSQL extends AbstractMapper implements ConfigInfoAggrMapper {
-	@Deprecated
-    public String batchRemoveAggr(List<String> datumList) {
-        final StringBuilder datumString = new StringBuilder();
-        for (String datum : datumList) {
-            datumString.append('\'').append(datum).append("',");
-        }
-        datumString.deleteCharAt(datumString.length() - 1);
-        return "DELETE FROM config_info_aggr WHERE data_id = ? AND group_id = ? AND tenant_id = ? AND datum_id IN ("
-                + datumString + ")";
-    }
-    @Deprecated
-    public String aggrConfigInfoCount(int size, boolean isIn) {
-        StringBuilder sql = new StringBuilder(
-                "SELECT count(*) FROM config_info_aggr WHERE data_id = ? AND group_id = ? AND tenant_id = ? AND datum_id");
-        if (isIn) {
-            sql.append(" IN (");
-        } else {
-            sql.append(" NOT IN (");
-        }
-        for (int i = 0; i < size; i++) {
-            if (i > 0) {
-                sql.append(", ");
-            }
-            sql.append('?');
-        }
-        sql.append(')');
-        
-        return sql.toString();
-    }
-    @Deprecated
-    public String findConfigInfoAggrIsOrdered() {
-        return "SELECT data_id,group_id,tenant_id,datum_id,app_name,content FROM "
-                + "config_info_aggr WHERE data_id = ? AND group_id = ? AND tenant_id = ? ORDER BY datum_id";
-    }
-    @Deprecated
-    public String findConfigInfoAggrByPageFetchRows(int startRow, int pageSize) {
-        return "SELECT data_id,group_id,tenant_id,datum_id,app_name,content FROM config_info_aggr WHERE data_id= ? AND "
-                + "group_id= ? AND tenant_id= ? ORDER BY datum_id LIMIT " + pageSize + " offset " + startRow;
-    }
-    @Deprecated
-    public String findAllAggrGroupByDistinct() {
-        return "SELECT DISTINCT data_id, group_id, tenant_id FROM config_info_aggr";
-    }
     
     @Override
     public String getTableName() {
