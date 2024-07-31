@@ -16,7 +16,7 @@ import net.hlinfo.nacos.plugin.datasource.constants.DataBaseSourceConstant;
  * @author hlinfo
  **/
 
-public class HistoryConfigInfoMapperByPgSQL extends AbstractMapper implements HistoryConfigInfoMapper {
+public class HistoryConfigInfoMapperByPgSQL extends AbstractMapperByPgsql implements HistoryConfigInfoMapper {
     
     @Override
     public String getTableName() {

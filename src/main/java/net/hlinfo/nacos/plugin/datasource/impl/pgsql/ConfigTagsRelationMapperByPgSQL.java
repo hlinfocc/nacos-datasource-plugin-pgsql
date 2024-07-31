@@ -21,7 +21,7 @@ import java.util.Map;
  * @author hlinfo
  **/
 
-public class ConfigTagsRelationMapperByPgSQL extends AbstractMapper implements ConfigTagsRelationMapper {
+public class ConfigTagsRelationMapperByPgSQL extends AbstractMapperByPgsql implements ConfigTagsRelationMapper {
     
 	@Deprecated
     public String getTableName() {

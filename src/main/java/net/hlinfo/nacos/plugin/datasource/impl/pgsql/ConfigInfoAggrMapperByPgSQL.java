@@ -18,7 +18,7 @@ import java.util.List;
  * @author hlinfo
  **/
 
-public class ConfigInfoAggrMapperByPgSQL extends AbstractMapper implements ConfigInfoAggrMapper {
+public class ConfigInfoAggrMapperByPgSQL extends AbstractMapperByPgsql implements ConfigInfoAggrMapper {
     
     @Override
     public String getTableName() {
@@ -44,4 +44,5 @@ public class ConfigInfoAggrMapperByPgSQL extends AbstractMapper implements Confi
         List<Object> paramList = CollectionUtils.list(dataId, groupId, tenantId);
         return new MapperResult(sql, paramList);
 	}
+
 }

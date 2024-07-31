@@ -16,7 +16,7 @@ import net.hlinfo.nacos.plugin.datasource.constants.DataBaseSourceConstant;
  * @author hlinfo
  **/
 
-public class ConfigInfoTagMapperByPgSQL extends AbstractMapper implements ConfigInfoTagMapper {
+public class ConfigInfoTagMapperByPgSQL extends AbstractMapperByPgsql implements ConfigInfoTagMapper {
     
 	@Deprecated
     public String getTableName() {

@@ -12,7 +12,7 @@ import net.hlinfo.nacos.plugin.datasource.constants.DataBaseSourceConstant;
  * @author hlinfo
  **/
 
-public class TenantInfoMapperByPgSQL extends AbstractMapper implements TenantInfoMapper {
+public class TenantInfoMapperByPgSQL extends AbstractMapperByPgsql implements TenantInfoMapper {
     
     @Override
     public String getTableName() {

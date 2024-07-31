@@ -24,7 +24,7 @@ import java.util.Map;
  * @author hlinfo
  **/
 
-public class ConfigInfoMapperByPgSQL extends AbstractMapper implements ConfigInfoMapper {
+public class ConfigInfoMapperByPgSQL extends AbstractMapperByPgsql implements ConfigInfoMapper {
     
     private static final String DATA_ID = "dataId";
     

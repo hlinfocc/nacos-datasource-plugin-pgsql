@@ -15,7 +15,7 @@ import net.hlinfo.nacos.plugin.datasource.constants.DataBaseSourceConstant;
  *
  * @author hlinfo
  */
-public class GroupCapacityMapperByPgSQL extends AbstractMapper implements GroupCapacityMapper {
+public class GroupCapacityMapperByPgSQL extends AbstractMapperByPgsql implements GroupCapacityMapper {
     
     @Override
     public String getTableName() {
